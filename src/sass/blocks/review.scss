@@ -1,0 +1,88 @@
+.review {
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.review__author {
+    font-family: $med;
+    font-size: 20px;
+    line-height: 27px;
+    color: #48494D;
+    margin-bottom: 12px;
+}
+
+.review__assessment {
+    padding-left: 19px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 9px;
+        height: 21px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &--odds::before {
+        background: url("../img/plus.svg") center no-repeat;
+    }
+
+    &--limitations::before {
+        background: url("../img/minus.svg") center no-repeat;
+    }
+}
+
+.review__assessment-title,
+.review__comment-title {
+    font-family: $med;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.review__assessment-description,
+.review__comment {
+    font-family: $default;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.review__rating {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.review__author-opinion {
+    font-family: $default;
+    font-size: 15px;
+    line-height: 20px;
+    color: #D12136;
+}
+
+.review__date {
+    font-family: $default;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    opacity: 0.4;
+}
+
+.review__user-block {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.review__answer-to-author {
+    outline: none;
+    border: none;
+    font-family: $default;
+    font-size: 16px;
+    line-height: 22px;
+    color: #D12136;
+    padding: 0;
+}
