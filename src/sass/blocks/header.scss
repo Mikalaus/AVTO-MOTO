@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    background-color: #F5F5F9;
+    margin-bottom: 74px;
+}
+
+.header__wrapper {
+    width: 60%;
+    min-width: 1024px;
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo-block {
+    display: flex;
+}
+
+.header__logo-img {
+    margin-right: 20px;
+}
+
+.header__bold-title {
+    font-family: $bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.13em;
+    color: #48494D;
+    text-transform: uppercase;
+}
+
+.header__default-title {
+    font-family: $med;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.13em;
+    color: #48494D;
+    text-transform: uppercase;
+}
+
+.header__logo-title {
+    margin-top: 5px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}

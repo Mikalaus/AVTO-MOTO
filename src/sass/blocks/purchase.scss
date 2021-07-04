@@ -1,0 +1,160 @@
+.purchase {
+    display: flex;
+}
+
+.purchase__slider {
+    margin-right: 57px;
+    margin-top: 16px;
+    position: relative;
+
+    &::before {
+        content: "new model";
+        position: absolute;
+        width: 122px;
+        height: 30px;
+        font-family: $med;
+        font-size: 10px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        padding-top: 7px;
+        padding-bottom: 10px;
+        top: 0px;
+        left: 0;
+        color: #FFFFFF;
+        background-color: #D12136;
+    }
+}
+
+.purchase__slides-block {
+    display: flex;
+    width: 600px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.purchase__slide-change {
+    width: 52px;
+    height: 52px;
+    background: url("../img/arrow.svg") center no-repeat;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #D7D9DF;
+    
+    &--previous {
+        transform: rotate(180deg);
+    }
+
+    &--disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        border-color: darken(#D7D9DF, 20);
+    }
+}
+
+.purchase__slides {
+    display: flex;
+    gap: 25px;
+}
+
+.purchase__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase__title {
+    margin-top: 0;
+    font-family: $bold;
+    font-size: 30px;
+    line-height: 41px;
+    color: #48494D;
+    margin-bottom: 19px;
+}
+
+.purchase__car-info-list {
+    display: flex;
+    gap: 7px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.purchase__car-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.purchase__car-info-description {
+    font-family: $default;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    min-width: 70px;
+
+    color: rgba(72, 73, 77, 0.5);
+}
+
+.purchase__price {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.purchase__new-price {
+    font-family: $bold;
+    font-size: 35px;
+    line-height: 48px;
+    color: #48494D;
+}
+
+.purchase__old-price {
+    font-family: $default;
+    font-size: 20px;
+    line-height: 27px;
+    position: relative;
+
+    color: rgba(72, 73, 77, 0.5);
+    margin-top: 28px;
+
+    &::before {
+        content: "";
+        border-bottom: 2px solid #A3A4A6;;
+        position: absolute;
+        right: -5%;
+        width: 110%;
+        height: 50%;
+        transform: rotate(-5deg);
+    }
+}
+
+.purchase__request {
+    cursor: pointer;
+    width: 196px;
+    box-sizing: border-box;
+    padding: 16.5px 10px;
+    border: none;
+    outline: none;
+    background-color: #D12136;
+    font-family: $med;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+
+    &:hover {
+        background-color: #BD0C21;
+    }
+}
+
+.purchase__credit-request {
+    @include red-border-button;
+    max-width: 222px;
+}

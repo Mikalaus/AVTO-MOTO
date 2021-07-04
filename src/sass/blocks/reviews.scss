@@ -1,0 +1,15 @@
+.reviews {
+    position: relative;
+}
+
+.reviews__send-review {
+    @include red-border-button;
+    width: 189px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.reviews__reviews-list {
+    padding: 0;
+}

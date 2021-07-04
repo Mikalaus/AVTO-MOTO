@@ -10,16 +10,19 @@
 
 
     <body>
+
+        <div class="visually-hidden">
+            <svg><symbol id="icon-star" viewBox="0 0 17 17"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.63145 0L10.5103 5.87336L16.5906 5.87336L11.6716 9.50329L13.5505 15.3766L8.63145 11.7467L3.71242 15.3766L5.59132 9.50329L0.672291 5.87336L6.75254 5.87336L8.63145 0Z"></path></symbol></svg>
+        </div>
+
         <header class="header">
             <div class="header__wrapper">
                 <div class="header__logo-block">
-                    <img src="" alt="" class="header__logo-img">
-                    <div class="header__logo-title">
-                        <h1>
-                            <span class="header__bold-title">avto</span>
-                            <span class="header__default-title">moto</span>
-                        </h1>
-                    </div>
+                    <img src="../img/logo.svg" width="55" height="55" alt="Логотип" class="header__logo-img">
+                    <h1 class="header__logo-title">
+                        <span class="header__bold-title">avto</span>
+                        <span class="header__default-title">moto</span>
+                    </h1>
                 </div>
                 <nav class="navigation__nav navigation">
                     <ul class="navigation__nav-items">
@@ -34,46 +37,48 @@
 
         <main class="main">
             <div class="main__wrapper">
-                <section class="main__slider slider">
-                    <img src="" alt="изображение машины" class="slider__photo">
-                    <div class="slider__slides-block">
-                        <button type="button" class="slider__previous">
-                        <div class="slider__slides">
-                            <img src="" alt="изображение экстерьера" class="slider__slide">
-                            <img src="" alt="изображение интерьера" class="slider__slide">
-                            <img src="" alt="изображение приборки" class="slider__slide">
-                        </div>
-                        <button type="button" class="slider__next">
-                    </div>
-                </section>
                 <section class="main__purchase purchase">
-                    <h2 class="purchase__title">Марпех 11</h2>
-                    <ul class="purchase__car-info-list">
-                        <li class="purchase__car-info-item">
-                            <img src="" alt="тип топлива" class="purchase__car-info-img">
-                            <span class="purchase__car-info-description">бензин</span>
-                        </li>
-                        <li class="purchase__car-info-item">
-                            <img src="" alt="тип коробки передач" class="purchase__car-info-img">
-                            <span class="purchase__car-info-description">механика</span>
-                        </li>
-                        <li class="purchase__car-info-item">
-                            <img src="" alt="мощность двигателя" class="purchase__car-info-img">
-                            <span class="purchase__car-info-description">100 л.с.</span>
-                        </li>
-                        <li class="purchase__car-info-item">
-                            <img src="" alt="объем двигателя" class="purchase__car-info-img">
-                            <span class="purchase__car-info-description">1.4 л</span>
-                        </li>
-                    </ul>
-
-                    <div class="purchase__price">
-                        <h3 class="purchase__new-price">2 300 000 &#8381</h3>
-                        <h3 class="purchase__old-price">2 400 000 &#8381</h3>
+                    <div class="purchase__slider">
+                        <img src="../img/exterier-big.jpg" width="600" alt="изображение машины" class="purchase__photo">
+                        <div class="purchase__slides-block">
+                            <button type="button" class=" purchase__slide-change purchase__slide-change--previous purchase__slide-change--disabled"></button>
+                            <div class="purchase__slides">
+                                <img src="../img/exterier-small.jpg" width="128" alt="изображение экстерьера" class="purchase__slide">
+                                <img src="../img/interier-small.jpg" width="128" alt="изображение интерьера" class="purchase__slide">
+                                <img src="../img/dashboard-small.jpg" width="128" alt="изображение приборки" class="purchase__slide">
+                            </div>
+                            <button type="button" class="purchase__slide-change"></button>
+                        </div>
                     </div>
-
-                    <button type="button" class="purchase__request">Оставить заявку</button>
-                    <button type="button" class="purchase__credit-request">В кредит от 11 000 &#8381</button>
+                    <div class="purchase__info">
+                        <h2 class="purchase__title">Марпех 11</h2>
+                        <ul class="purchase__car-info-list">
+                            <li class="purchase__car-info-item">
+                                <img src="../img/engine-type.svg" alt="тип топлива" class="purchase__car-info-img">
+                                <span class="purchase__car-info-description">бензин</span>
+                            </li>
+                            <li class="purchase__car-info-item">
+                                <img src="../img/gearbox-icon.svg" alt="тип коробки передач" class="purchase__car-info-img">
+                                <span class="purchase__car-info-description">механика</span>
+                            </li>
+                            <li class="purchase__car-info-item">
+                                <img src="../img/power-icon.svg" alt="мощность двигателя" class="purchase__car-info-img">
+                                <span class="purchase__car-info-description">100 л.с.</span>
+                            </li>
+                            <li class="purchase__car-info-item">
+                                <img src="../img/engine-capacity-icon.svg" alt="объем двигателя" class="purchase__car-info-img">
+                                <span class="purchase__car-info-description">1.4 л</span>
+                            </li>
+                        </ul>
+    
+                        <div class="purchase__price">
+                            <h3 class="purchase__new-price">2 300 000 &#8381</h3>
+                            <h3 class="purchase__old-price">2 400 000 &#8381</h3>
+                        </div>
+    
+                        <button type="button" class="purchase__request">Оставить заявку</button>
+                        <button type="button" class="purchase__credit-request">В кредит от 11 000 &#8381</button>
+                    </div>
                 </section>
                 <section class="main__tabs tabs">
                     <div class="tabs__tab-list">
@@ -119,38 +124,43 @@
                             </li>
                         </ul>
 
-                        <ul class="tabs__reviews reviews">
+                        <div class="tabs__reviews reviews">
                             <button type="button" class="reviews__send-review">Оставить отзыв</button>
-                            <li class="reviews__review review">
-                                <h2 class="review__author">Борис Иванов</h2>
-                                <div class="review__assessment review__assessment--odds">
-                                    <h3 class="review__assessment-title">Достоинства</h3>
-                                    <span class="review__assessment-description">мощность, внешний вид</span>
-                                </div>
-                                <div class="review__assessment review__assessment--limitations">
-                                    <h3 class="review__assessment-title">Недостатки</h3>
-                                    <span class="review__assessment-description">Слабые тормозные колодки (пришлось заменить)</span>
-                                </div>
-                                <div class="review__comment-block">
-                                    <h3 class="review__comment-title">Комментарий</h3>
-                                    <p class="review__comment">Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю, что полностью доволен.</p>
-                                </div>
-                                <div class="review__rating">
-                                    <div class="review__rate"></div>
-                                    <span class="review__author-opinion">Советует</span>
-                                </div>
-                                <review__user-block>
-                                    <span class="review__date"></span>
-                                    <button class="review__answer-to-author">Ответить</button>
-                                </review__user-block>
-                            </li>
-                        </ul>
+                            <ul class="reviews__reviews-list">
+                                <li class="reviews__review review">
+                                    <h2 class="review__author">Борис Иванов</h2>
+                                    <div class="review__assessment review__assessment--odds">
+                                        <h3 class="review__assessment-title">Достоинства</h3>
+                                        <span class="review__assessment-description">мощность, внешний вид</span>
+                                    </div>
+                                    <div class="review__assessment review__assessment--limitations">
+                                        <h3 class="review__assessment-title">Недостатки</h3>
+                                        <span class="review__assessment-description">Слабые тормозные колодки (пришлось заменить)</span>
+                                    </div>
+                                    <div class="review__comment-block">
+                                        <h3 class="review__comment-title">Комментарий</h3>
+                                        <p class="review__comment">Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю, что полностью доволен.</p>
+                                    </div>
+                                    <div class="review__rating">
+                                        <div class="property__stars rating__stars">
+                                            <span style="width: 60%"></span>
+                                            <span class="visually-hidden">Rating</span>
+                                        </div>
+                                        <span class="review__author-opinion">Советует</span>
+                                    </div>
+                                    <div class="review__user-block">
+                                        <span class="review__date">1 минуту назад</span>
+                                        <button type="button" class="review__answer-to-author">Ответить</button>
+                                    </div class="review__user-block">
+                                </li>
+                            </ul>
+                        </div>
 
                         <div class="tabs__contacts contacts">
                             <ul class="contacts__info">
                                 <li class="contacts__item">
                                     <h2 class="contacts__item-title">Адрес</h2>
-                                    <span class="contacts__item-description">Санкт-Петербург, набережная реки Карповки, дом 5</span>
+                                    <span class="contacts__item-description">Санкт-Петербург,<br>набережная реки Карповки, дом 5</span>
                                 </li>
 
                                 <li class="contacts__item">
@@ -178,24 +188,6 @@
             </div>
         </main>
 
-        <div class="modal-card">
-            <button type="button" class="modal-card__close-button">
-            <h2 class="modal-card__title">Оставить отзыв</h2>
-            <form action="POST" class="modal-card__form">
-                <div class="modal-card__inputs">
-                    <input type="text" placeholder="Имя" class="modal-card__name-input">
-                    <input type="text" placeholder="Достоинства" class="modal-card__odds-input">
-                    <input type="text" placeholder="Недостатки" class="modal-card__limitations-input">
-                    <input type="text" class="modal-card__rate-input">
-                    <textarea name="" id="" cols="30" rows="10" class="modal-card__comment-input">
-
-                    </textarea>
-                </div>
-
-                <button type="submit" class="modal-card__submit">Оставить отзыв</button>
-            </form>
-        </div>
-
         <footer class="footer">
             <nav class="footer__nav navigation">
                 <ul class="navigation__nav-items">
@@ -209,6 +201,62 @@
                 </ul>
             </nav>
         </footer>
+
+        <div class="modal-card visually-hidden">
+            <div class="modal-card__wrapper">
+                <button type="button" class="modal-card__close-button"></button>
+                <h2 class="modal-card__title">Оставить отзыв</h2>
+                <form action="POST" class="modal-card__form">
+                    <div class="modal-card__inputs">
+                        <div class="modal-card__required-wrapper"><input type="text" placeholder="Имя" class="modal-card__input" required></div>
+                        <input type="text" placeholder="Достоинства" class="modal-card__input">
+                        <input type="text" placeholder="Недостатки" class="modal-card__input">
+                        <div class="modal-card__rate rating">
+    
+                            <input class="rating__rate-input visually-hidden" name="rating" value="5" id="5-stars" type="radio">
+                            <label for="5-stars" class="rating__rate-label" title="perfect">
+                                <svg class="rating__star-image" width="27" height="27">
+                                <use xlink:href="#icon-star"></use>
+                                </svg>
+                            </label>
+        
+                            <input class="rating__rate-input visually-hidden" name="rating" value="4" id="4-stars" type="radio" >
+                            <label for="4-stars" class="rating__rate-label" title="good">
+                                <svg class="rating__star-image" width="27" height="27">
+                                <use xlink:href="#icon-star"></use>
+                                </svg>
+                            </label>
+        
+                            <input class="rating__rate-input visually-hidden" name="rating" value="3" id="3-stars" type="radio">
+                            <label for="3-stars" class="rating__rate-label" title="not bad">
+                                <svg class="rating__star-image" width="27" height="27">
+                                <use xlink:href="#icon-star"></use>
+                                </svg>
+                            </label>
+        
+                            <input class="rating__rate-input visually-hidden" name="rating" value="2" id="2-stars" type="radio" >
+                            <label for="2-stars" class="rating__rate-label" title="badly">
+                                <svg class="rating__star-image" width="27" height="27">
+                                <use xlink:href="#icon-star"></use>
+                                </svg>
+                            </label>
+        
+                            <input class="rating__rate-input visually-hidden" name="rating" value="1" id="1-star" type="radio">
+                            <label for="1-star" class=" rating__rate-label" title="terribly">
+                                <svg class="rating__star-image" width="27" height="27">
+                                <use xlink:href="#icon-star"></use>
+                                </svg>
+                            </label>
+    
+                            <span class="rating__title">Оцените товар:</span>
+                        </div>
+                        <textarea class="modal-card__comment-input" placeholder="Комментарий" required></textarea>
+                    </div>
+    
+                    <button type="submit" class="modal-card__submit">Оставить отзыв</button>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
    
