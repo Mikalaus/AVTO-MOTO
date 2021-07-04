@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  justify-content: center; }
+
+.main__wrapper {
+  width: 60%;
+  min-width: 1024px;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column; }
+
+.main__tabs {
+  margin-top: 90px; }
