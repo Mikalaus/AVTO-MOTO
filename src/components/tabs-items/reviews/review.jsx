@@ -1,24 +1,24 @@
 import React from 'react';
 
-const Review = () => {
+const Review = ({review}) => {
     return (
         <li className="reviews__review review">
-            <h2 className="review__author">Борис Иванов</h2>
+            <h2 className="review__author">{review.name}</h2>
             <div className="review__assessment review__assessment--odds">
                 <h3 className="review__assessment-title">Достоинства</h3>
-                <span className="review__assessment-description">мощность, внешний вид</span>
+                <span className="review__assessment-description">{review.odds}</span>
             </div>
             <div className="review__assessment review__assessment--limitations">
                 <h3 className="review__assessment-title">Недостатки</h3>
-                <span className="review__assessment-description">Слабые тормозные колодки (пришлось заменить)</span>
+                <span className="review__assessment-description">{review.limitations}</span>
             </div>
             <div className="review__comment-block">
                 <h3 className="review__comment-title">Комментарий</h3>
-                <p className="review__comment">Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю, что полностью доволен.</p>
+                <p className="review__comment">{review.comment}</p>
             </div>
             <div className="review__rating">
                 <div className="property__stars rating__stars">
-                <span style={{width: '60%'}} />
+                <span style={{width: `${review.rating * 20}%`}} />
                 <span className="visually-hidden">Rating</span>
                 </div>
                 <span className="review__author-opinion">Советует</span>

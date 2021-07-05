@@ -82,6 +82,7 @@ ul {
   justify-content: center; }
 
 .modal-card__close-button {
+  cursor: pointer;
   position: absolute;
   width: 15px;
   height: 15px;
@@ -393,7 +394,8 @@ ul {
   flex-direction: column; }
 
 .tabs__tab-list {
-  display: flex; }
+  display: flex;
+  margin-bottom: 30px; }
 
 .tabs__tab {
   cursor: pointer;
