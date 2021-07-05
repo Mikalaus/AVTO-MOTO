@@ -2,7 +2,7 @@ import React from 'react';
 
 const Characteristics = () => {
     return (
-        <ul className="tabs__characteristics-list">
+        <ul className="tabs__characteristics-list tabs__active-tab-info">
             <li className="tabs__characteristic-item">
                 <span className="tabs__characteristic-type">Трансмиссия</span>
                 <span className="tabs__characteristic-value">Роботизированная</span>

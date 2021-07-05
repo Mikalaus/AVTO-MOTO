@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contacts = () => {
     return (
-        <div className="tabs__contacts contacts">
+        <div className="tabs__contacts contacts visually-hidden">
             <ul className="contacts__info">
                 <li className="contacts__item">
                     <h2 className="contacts__item-title">Адрес</h2>
