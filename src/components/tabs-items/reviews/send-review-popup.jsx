@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import { setReview } from '../../../store/actions';
+import PropTypes from 'prop-types';
+import {RATING_STAR_IMG_SIZE} from '../../../const';
 
 const SendReviewPopup = ({onReviewSend}) => {
 
@@ -80,45 +82,102 @@ const SendReviewPopup = ({onReviewSend}) => {
                 <form action="POST" className="modal-card__form">
                     <div className="modal-card__inputs">
                         <div className="modal-card__required-wrapper">
-                            <input onInput={nameInputChangeHandler()} type="text" placeholder="Имя" className="modal-card__input modal-card__input--name" required />
+                            <input
+                                onInput={nameInputChangeHandler()}
+                                type="text"
+                                placeholder="Имя"
+                                className="modal-card__input modal-card__input--name"
+                                required
+                            />
                         </div>
-                        <input onInput={oddsInputChangeHandler()} type="text" placeholder="Достоинства" className="modal-card__input" />
-                        <input onInput={limitationsInputChangeHandler()} type="text" placeholder="Недостатки" className="modal-card__input" />
+                        <input
+                            onInput={oddsInputChangeHandler()}
+                            type="text"
+                            placeholder="Достоинства"
+                            className="modal-card__input"
+                        />
+                        <input
+                            onInput={limitationsInputChangeHandler()}
+                            type="text"
+                            placeholder="Недостатки"
+                            className="modal-card__input"
+                        />
                         <div className="modal-card__rate rating">
-                            <input onChange={rateRadioChangeHandler()} className="rating__rate-input visually-hidden" name="rating" defaultValue={5} id="5-stars" type="radio" />
+                            <input
+                                onChange={rateRadioChangeHandler()}
+                                className="rating__rate-input visually-hidden"
+                                name="rating"
+                                defaultValue={5}
+                                id="5-stars"
+                                type="radio"
+                            />
                             <label htmlFor="5-stars" className="rating__rate-label" title="perfect">
-                                <svg className="rating__star-image" width={27} height={27}>
+                                <svg className="rating__star-image" width={RATING_STAR_IMG_SIZE} height={RATING_STAR_IMG_SIZE}>
                                 <use xlinkHref="#icon-star" />
                                 </svg>
                             </label>
-                            <input onChange={rateRadioChangeHandler()} className="rating__rate-input visually-hidden" name="rating" defaultValue={4} id="4-stars" type="radio" />
+                            <input
+                                onChange={rateRadioChangeHandler()}
+                                className="rating__rate-input visually-hidden"
+                                name="rating"
+                                defaultValue={4}
+                                id="4-stars"
+                                type="radio"
+                            />
                             <label htmlFor="4-stars" className="rating__rate-label" title="good">
-                                <svg className="rating__star-image" width={27} height={27}>
+                                <svg className="rating__star-image" width={RATING_STAR_IMG_SIZE} height={RATING_STAR_IMG_SIZE}>
                                 <use xlinkHref="#icon-star" />
                                 </svg>
                             </label>
-                            <input onChange={rateRadioChangeHandler()} className="rating__rate-input visually-hidden" name="rating" defaultValue={3} id="3-stars" type="radio" />
+                            <input
+                                onChange={rateRadioChangeHandler()}
+                                className="rating__rate-input visually-hidden"
+                                name="rating"
+                                defaultValue={3}
+                                id="3-stars"
+                                type="radio"
+                            />
                             <label htmlFor="3-stars" className="rating__rate-label" title="not bad">
-                                <svg className="rating__star-image" width={27} height={27}>
+                                <svg className="rating__star-image" width={RATING_STAR_IMG_SIZE} height={RATING_STAR_IMG_SIZE}>
                                 <use xlinkHref="#icon-star" />
                                 </svg>
                             </label>
-                            <input onChange={rateRadioChangeHandler()} className="rating__rate-input visually-hidden" name="rating" defaultValue={2} id="2-stars" type="radio" />
+                            <input
+                                onChange={rateRadioChangeHandler()}
+                                className="rating__rate-input visually-hidden"
+                                name="rating"
+                                defaultValue={2}
+                                id="2-stars"
+                                type="radio"
+                            />
                             <label htmlFor="2-stars" className="rating__rate-label" title="badly">
-                                <svg className="rating__star-image" width={27} height={27}>
+                                <svg className="rating__star-image" width={RATING_STAR_IMG_SIZE} height={RATING_STAR_IMG_SIZE}>
                                 <use xlinkHref="#icon-star" />
                                 </svg>
                             </label>
-                            <input onChange={rateRadioChangeHandler()} className="rating__rate-input visually-hidden" name="rating" defaultValue={1} id="1-star" type="radio" />
+                            <input
+                                onChange={rateRadioChangeHandler()}
+                                className="rating__rate-input visually-hidden"
+                                name="rating"
+                                defaultValue={1}
+                                id="1-star"
+                                type="radio"
+                            />
                             <label htmlFor="1-star" className=" rating__rate-label" title="terribly">
-                                <svg className="rating__star-image" width={27} height={27}>
+                                <svg className="rating__star-image" width={RATING_STAR_IMG_SIZE} height={RATING_STAR_IMG_SIZE}>
                                 <use xlinkHref="#icon-star" />
                                 </svg>
                             </label>
                             <span className="rating__title">Оцените товар:</span>
                         </div>
                         <div className="modal-card__comment-wrapper">
-                            <textarea onInput={commentInputChangeHandler()} className="modal-card__comment-input" placeholder="Комментарий" required defaultValue={""} />
+                            <textarea
+                                onInput={commentInputChangeHandler()}
+                                className="modal-card__comment-input"
+                                placeholder="Комментарий"
+                                required
+                                defaultValue={""}
+                            />
                         </div>
                     </div>
                     <button onClick={submitButtonClickHandler()} type="submit" className="modal-card__submit">Оставить отзыв</button>
@@ -126,6 +185,10 @@ const SendReviewPopup = ({onReviewSend}) => {
             </div>
         </div>
     );
+}
+
+SendReviewPopup.propTypes = {
+    onReviewSend: PropTypes.func.isRequired
 }
 
 const mapDispatchToProps = (dispatch) => ({

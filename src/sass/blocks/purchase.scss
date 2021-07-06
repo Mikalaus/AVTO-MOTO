@@ -31,7 +31,7 @@
 .purchase__slides-block {
     display: flex;
     width: 600px;
-    margin-top: 40px;
+    margin-top: 34px;
     align-items: center;
     justify-content: space-between;
 }
@@ -73,7 +73,7 @@
     font-size: 30px;
     line-height: 41px;
     color: #48494D;
-    margin-bottom: 19px;
+    margin-bottom: 22px;
 }
 
 .purchase__car-info-list {
@@ -148,6 +148,8 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 16px;
+    margin-top: 3px;
+    margin-left: -3px;
 
     &:hover {
         background-color: #BD0C21;
