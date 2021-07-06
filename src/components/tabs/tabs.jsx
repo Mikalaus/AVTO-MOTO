@@ -35,9 +35,26 @@ const Tabs = () => {
     return (
         <section className="main__tabs tabs">
             <div className="tabs__tab-list">
-                <button onClick={characteristicsButtonClickHandler} type="button" value="characteristics" className="tabs__tab tabs__tab--characteristics tabs__tab--active">Характеристики</button>
-                <button onClick={reviewsButtonClickHandler} type="button" value="reviews" className="tabs__tab tabs__tab--reviews">Отзывы</button>
-                <button onClick={contactsButtonClickHandler} type="button" value="contacts" className="tabs__tab tabs__tab--contacts">Контакты</button>
+                <button
+                    onClick={characteristicsButtonClickHandler}
+                    type="button"
+                    value="characteristics"
+                    className="tabs__tab tabs__tab--characteristics tabs__tab--active"
+                >Характеристики</button>
+                
+                <button
+                    onClick={reviewsButtonClickHandler}
+                    type="button"
+                    value="reviews"
+                    className="tabs__tab tabs__tab--reviews"
+                >Отзывы</button>
+                
+                <button
+                    onClick={contactsButtonClickHandler}
+                    type="button"
+                    value="contacts"
+                    className="tabs__tab tabs__tab--contacts"
+                >Контакты</button>
             </div>
             <Characteristics />
             <Contacts />

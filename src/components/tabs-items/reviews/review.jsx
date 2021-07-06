@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Review = ({review}) => {
 
@@ -101,6 +102,17 @@ const Review = ({review}) => {
             </div>
         </li>
     );
+}
+
+Review.propTypes = {
+    review: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        odds: PropTypes.string,
+        limitations: PropTypes.string,
+        rating: PropTypes.number.isRequired,
+        comment: PropTypes.string.isRequired,
+        date: PropTypes.instanceOf(Date).isRequired
+    })
 }
 
 export default Review;

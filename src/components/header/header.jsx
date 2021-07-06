@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from '../../img/logo.svg';
+import {LogoImgSizes} from '../../const';
 
 const Header = () => {
     return (
         <header className="header">
             <div className="header__wrapper">
                 <div className="header__logo-block">
-                    <img src={logo} width={55} height={55} alt="Логотип" className="header__logo-img" />
+                    <img src={logo} width={LogoImgSizes.WIDTH} height={LogoImgSizes.HEIGHT} alt="Логотип" className="header__logo-img" />
                     <h1 className="header__logo-title">
                     <span className="header__bold-title">avto</span>
                     <span className="header__default-title">moto</span>

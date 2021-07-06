@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Review from './review';
 import {nanoid} from 'nanoid';
+import PropTypes from 'prop-types';
 
 const Reviews = ({reviews}) => {
 
@@ -23,6 +24,19 @@ const Reviews = ({reviews}) => {
         </div>
 
     );
+}
+
+Reviews.propTypes = {
+    reviews: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            odds: PropTypes.string,
+            limitations: PropTypes.string,
+            rating: PropTypes.number.isRequired,
+            comment: PropTypes.string.isRequired,
+            date: PropTypes.instanceOf(Date).isRequired
+        })
+    )
 }
 
 const mapStateToProps = (state) => {

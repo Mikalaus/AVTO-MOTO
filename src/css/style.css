@@ -202,7 +202,7 @@ ul {
 .header {
   display: flex;
   justify-content: center;
-  padding: 15px 0px;
+  padding: 15px 0px 15px 14px;
   background-color: #F5F5F9;
   margin-bottom: 74px; }
 
@@ -285,7 +285,7 @@ ul {
 .purchase__slides-block {
   display: flex;
   width: 600px;
-  margin-top: 40px;
+  margin-top: 34px;
   align-items: center;
   justify-content: space-between; }
 
@@ -319,7 +319,7 @@ ul {
   font-size: 30px;
   line-height: 41px;
   color: #48494D;
-  margin-bottom: 19px; }
+  margin-bottom: 22px; }
 
 .purchase__car-info-list {
   display: flex;
@@ -382,7 +382,9 @@ ul {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  margin-top: 3px;
+  margin-left: -3px; }
   .purchase__request:hover {
     background-color: #BD0C21; }
 
@@ -409,12 +411,13 @@ ul {
   width: 60%;
   min-width: 1024px;
   max-width: 1920px;
-  margin-bottom: 140px;
-  flex-direction: column; }
+  margin-bottom: 115px;
+  flex-direction: column;
+  padding-left: 6px; }
 
 .tabs__tab-list {
   display: flex;
-  margin-bottom: 30px; }
+  margin-bottom: 0px; }
 
 .tabs__tab {
   cursor: pointer;
@@ -676,7 +679,7 @@ ul {
 .footer {
   display: flex;
   justify-content: center;
-  padding: 20px 0px;
+  padding: 20px 0px 0px 18px;
   background-color: #F5F5F9; }
 
 .footer__nav {
