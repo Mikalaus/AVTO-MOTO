@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import { setReview } from '../../../store/actions';
 import PropTypes from 'prop-types';
 import {RATING_STAR_IMG_SIZE} from '../../../const';
+import {escButtonKeydownCheck, outsideModalClickCheck} from '../../../util';
+
 
 const SendReviewPopup = ({onReviewSend}) => {
 
@@ -33,8 +35,8 @@ const SendReviewPopup = ({onReviewSend}) => {
     }
 
     const submitButtonClickHandler = () => (evt) => {
-        const nameInput = document.querySelector(`.modal-card__input--name`)
-        const commentInput = document.querySelector(`.modal-card__comment-input`)
+        const nameInput = document.querySelector(`.modal-card__input--name`);
+        const commentInput = document.querySelector(`.modal-card__comment-input`);
 
         evt.preventDefault();
 
@@ -61,18 +63,9 @@ const SendReviewPopup = ({onReviewSend}) => {
 
     const closeButtonClickHandler = () => {
         document.querySelector(`.modal-card`).classList.add('visually-hidden');
+        window.removeEventListener(`keydown`, escButtonKeydownCheck);
+        document.removeEventListener('mouseup', outsideModalClickCheck);
     }
-
-
-    const outsideModalClickHandler = () => (evt) => {
-        const modal = document.querySelector(`.modal-card__wrapper`);
-        let isModal = evt.target === modal || modal.contains(evt.target);
-        if (!isModal) {
-            document.querySelector(`.modal-card`).classList.add('visually-hidden');
-        }
-    }
-
-    document.addEventListener('mouseup', outsideModalClickHandler())
 
     return (
         <div className="modal-card visually-hidden">

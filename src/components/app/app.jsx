@@ -6,12 +6,6 @@ import SendReviewPopup from '../tabs-items/reviews/send-review-popup';
 
 const App = () => {
 
-    window.addEventListener(`keydown`, (evt) => {
-        if (evt.key === `Escape`) {
-            document.querySelector(`.modal-card`).classList.add('visually-hidden');
-        }
-    })
-
     return (
         <>
             <div className="visually-hidden">

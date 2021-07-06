@@ -3,12 +3,19 @@ import {connect} from 'react-redux';
 import Review from './review';
 import {nanoid} from 'nanoid';
 import PropTypes from 'prop-types';
+import {escButtonKeydownCheck, outsideModalClickCheck} from '../../../util';
 
 const Reviews = ({reviews}) => {
+
+    const escButtonKeydownHandler = () => escButtonKeydownCheck;
+    const outsideModalClickHandler = () => outsideModalClickCheck;
 
     const sendReviewButtonClickHandler = () => {
         document.querySelector(`.modal-card`).classList.remove('visually-hidden');
         document.querySelector(`.modal-card__required-wrapper input`).focus()
+
+        document.addEventListener('mouseup', outsideModalClickHandler());
+        window.addEventListener(`keydown`, escButtonKeydownHandler())
     }
 
     return (
