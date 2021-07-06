@@ -20,7 +20,7 @@ const SliderImgSizes = {
 
 const FIRST_ARRAY_ELEMENT_INDEX = 0;
 
-const RATING_STAR_IMG_SIZE = 55;
+const RATING_STAR_IMG_SIZE = 27;
 
 const MapCoordinates = {
     LATTITUDE: 59.968119003545425,
