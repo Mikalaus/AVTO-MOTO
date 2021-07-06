@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Review from './review';
+import {nanoid} from 'nanoid';
 
 const Reviews = ({reviews}) => {
 
@@ -15,7 +16,7 @@ const Reviews = ({reviews}) => {
             <ul className="reviews__reviews-list">
                 {
                     reviews.map((review) => (
-                        <Review review={review} />
+                        <Review review={review} key={nanoid()} />
                     ))
                 }
             </ul>

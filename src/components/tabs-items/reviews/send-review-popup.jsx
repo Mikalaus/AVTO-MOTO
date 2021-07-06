@@ -31,17 +31,30 @@ const SendReviewPopup = ({onReviewSend}) => {
     }
 
     const submitButtonClickHandler = () => (evt) => {
+        const nameInput = document.querySelector(`.modal-card__input--name`)
+        const commentInput = document.querySelector(`.modal-card__comment-input`)
+
         evt.preventDefault();
-        onReviewSend({
-            name: name,
-            odds: odds,
-            limitations: limitations,
-            rating: rating,
-            comment: comment,
-            date: new Date()
-        })
-        document.querySelector(`.modal-card`).classList.add('visually-hidden');
-        document.querySelector(`.modal-card__form`).reset();
+
+        if(nameInput.value !== `` && commentInput.value !== ``) {
+
+            localStorage.setItem('name', evt.target.value);
+            localStorage.setItem('odds', evt.target.value);
+            localStorage.setItem('limitations', evt.target.value);
+            localStorage.setItem('rating', evt.target.value);
+            localStorage.setItem('comment', evt.target.value);
+
+            onReviewSend({
+                name: name,
+                odds: odds,
+                limitations: limitations,
+                rating: rating,
+                comment: comment,
+                date: new Date()
+            })
+            document.querySelector(`.modal-card`).classList.add('visually-hidden');
+            document.querySelector(`.modal-card__form`).reset();
+        }
     }
 
     const closeButtonClickHandler = () => {
@@ -67,7 +80,7 @@ const SendReviewPopup = ({onReviewSend}) => {
                 <form action="POST" className="modal-card__form">
                     <div className="modal-card__inputs">
                         <div className="modal-card__required-wrapper">
-                            <input onInput={nameInputChangeHandler()} type="text" placeholder="Имя" className="modal-card__input" required />
+                            <input onInput={nameInputChangeHandler()} type="text" placeholder="Имя" className="modal-card__input modal-card__input--name" required />
                         </div>
                         <input onInput={oddsInputChangeHandler()} type="text" placeholder="Достоинства" className="modal-card__input" />
                         <input onInput={limitationsInputChangeHandler()} type="text" placeholder="Недостатки" className="modal-card__input" />
@@ -104,7 +117,9 @@ const SendReviewPopup = ({onReviewSend}) => {
                             </label>
                             <span className="rating__title">Оцените товар:</span>
                         </div>
-                        <textarea onInput={commentInputChangeHandler()} className="modal-card__comment-input" placeholder="Комментарий" required defaultValue={""} />
+                        <div className="modal-card__comment-wrapper">
+                            <textarea onInput={commentInputChangeHandler()} className="modal-card__comment-input" placeholder="Комментарий" required defaultValue={""} />
+                        </div>
                     </div>
                     <button onClick={submitButtonClickHandler()} type="submit" className="modal-card__submit">Оставить отзыв</button>
                 </form>
