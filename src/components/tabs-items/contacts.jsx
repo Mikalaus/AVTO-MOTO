@@ -1,6 +1,27 @@
 import React from 'react';
+import { compose, withProps } from "recompose"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+
+const MyMapComponent = compose(
+  withProps({
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
+    loadingElement: <div style={{ height: `100%` }} />,
+    containerElement: <div style={{ height: `271px` }} />,
+    mapElement: <div style={{ height: `100%` }} />,
+  }),
+  withScriptjs,
+  withGoogleMap
+)((props) =>
+  <GoogleMap
+    defaultZoom={17}
+    defaultCenter={{ lat: 59.968119003545425, lng: 30.316491998619156 }}
+  >
+    {props.isMarkerShown && <Marker position={{ lat: 59.968119003545425, lng: 30.316491998619156 }} />}
+  </GoogleMap>
+);
 
 const Contacts = () => {
+
     return (
         <div className="tabs__contacts contacts visually-hidden">
             <ul className="contacts__info">
@@ -22,6 +43,9 @@ const Contacts = () => {
                 </li>
             </ul>
             <div className="contacts__map" id="map">
+                <MyMapComponent
+                    isMarkerShown={true}
+                />
             </div>
         </div>
     );
