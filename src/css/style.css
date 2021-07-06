@@ -202,12 +202,12 @@ ul {
 .header {
   display: flex;
   justify-content: center;
-  padding: 15px 0px 15px 14px;
+  padding: 15px 0px 15px 0px;
   background-color: #F5F5F9;
-  margin-bottom: 74px; }
+  margin-bottom: 72px; }
 
 .header__wrapper {
-  width: 60%;
+  width: 60.9%;
   min-width: 1024px;
   max-width: 1920px;
   display: flex;
@@ -247,9 +247,10 @@ ul {
   justify-content: center; }
 
 .main__wrapper {
-  width: 60%;
+  width: 60.9%;
   min-width: 1024px;
   max-width: 1920px;
+  margin-left: -11px;
   display: flex;
   flex-direction: column; }
 
@@ -679,10 +680,10 @@ ul {
 .footer {
   display: flex;
   justify-content: center;
-  padding: 20px 0px 0px 18px;
+  padding: 20px 0px 0px 0px;
   background-color: #F5F5F9; }
 
 .footer__nav {
-  width: 60%;
+  width: 60.9%;
   min-width: 1024px;
   max-width: 1920px; }
