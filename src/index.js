@@ -8,9 +8,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>,
+    <App/>
   </Provider>,
-  document.querySelector(`#root`)
+  document.querySelector(`body`)
 );
 
 reportWebVitals();
