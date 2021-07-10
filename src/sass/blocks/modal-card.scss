@@ -35,6 +35,18 @@
     outline: none;
 }
 
+.modal-card__input-invalid-descrition {
+    position: absolute;
+    top: -23px;
+    left: 0;
+    font-family: $default;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #FF0000;
+    display: none;
+}
+
 .modal-card__title {
     font-family: $med;
     font-size: 25px;
@@ -69,9 +81,19 @@
     line-height: 19px;
     color: #48494D;
     outline: none;
+    resize: none;
+    position: relative;
 
     &:focus-within {
         border: 2px solid #D12136;
+    }
+
+    &:invalid {
+        border: 2px solid #FF0000;
+    }
+
+    &:invalid + .modal-card__input-invalid-descrition {
+        display: block;
     }
 }
 
@@ -123,6 +145,14 @@
 
     &:focus-within {
         border: 2px solid #D12136;
+    }
+
+    &--name:invalid {
+        border: 2px solid #FF0000;
+    }
+
+    &--name:invalid + .modal-card__input-invalid-descrition {
+        display: block;
     }
 }
 

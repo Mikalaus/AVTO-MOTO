@@ -3,6 +3,7 @@ const escButtonKeydownCheck = (evt) => {
         document.querySelector(`.modal-card`).classList.add('visually-hidden');
         window.removeEventListener(`keydown`, escButtonKeydownCheck)
         document.removeEventListener('mouseup', outsideModalClickCheck)
+        document.querySelector(`body`).classList.remove('hidden-overflow');
     }
 }
 
@@ -13,6 +14,7 @@ const outsideModalClickCheck = (evt) => {
         document.querySelector(`.modal-card`).classList.add('visually-hidden');
         window.removeEventListener(`keydown`, escButtonKeydownCheck)
         document.removeEventListener('mouseup', outsideModalClickCheck)
+        document.querySelector(`body`).classList.remove('hidden-overflow');
     }
 }
 
