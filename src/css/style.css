@@ -19,6 +19,10 @@
   font-display: swap;
   src: url("../fonts/open-sans-regular.woff2") format("woff2"), url("../fonts/open-sans-regular.woff") format("woff"); }
 
+html {
+  width: 100vw;
+  overflow-x: hidden; }
+
 body {
   position: relative;
   padding: 0;
@@ -64,7 +68,8 @@ ul {
   flex-wrap: wrap;
   min-width: 520px;
   padding-left: 0;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding-right: 20px; }
 
 .navigation__nav-item {
   margin-bottom: 10px; }
@@ -242,7 +247,7 @@ ul {
 .header {
   display: flex;
   justify-content: center;
-  padding: 15px 0px 15px 0px;
+  padding: 15px 0px;
   background-color: #F5F5F9;
   margin-bottom: 72px; }
 
@@ -293,7 +298,6 @@ ul {
   width: 60.9%;
   min-width: 1024px;
   max-width: 1920px;
-  margin-left: -11px;
   display: flex;
   flex-direction: column; }
 
@@ -445,6 +449,7 @@ ul {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #D12136;
+  background: #FFF;
   max-width: 222px; }
   .purchase__credit-request:hover {
     background-color: #D12136;
@@ -474,7 +479,8 @@ ul {
   padding-bottom: 14px;
   font-family: "Open Sans regular", "Arial", sans-serif;
   font-size: 20px;
-  line-height: 27px; }
+  line-height: 27px;
+  background: #FFF; }
   .tabs__tab--active {
     background: #D12136;
     border-color: #D12136;
@@ -528,6 +534,7 @@ ul {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #D12136;
+  background: #FFF;
   width: 189px;
   position: absolute;
   top: 0;

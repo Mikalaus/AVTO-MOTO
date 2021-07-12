@@ -3,6 +3,11 @@ $default: "Open Sans regular", "Arial", sans-serif;
 $med: "Open Sans semiBold", "Arial", sans-serif;
 $light: "Open Sans light", "Arial", sans-serif;
 
+html {
+  width:100vw;
+    overflow-x:hidden;
+}
+
 body {
   position: relative;
   padding: 0;
