@@ -13,9 +13,9 @@ const Header = () => {
                     <span className="header__default-title">moto</span>
                     </h1>
                 </div>
-                <nav className="navigation__nav navigation">
+                <nav className="header__nav navigation">
                     <ul className="navigation__nav-items">
-                    <li className="navigation__nav-item"><a href="cars.html" className="navigation__nav-link">Автомобили</a></li>
+                        <li className="navigation__nav-item"><a href="cars.html" className="navigation__nav-link">Автомобили</a></li>
                         <li className="navigation__nav-item"><a href="contacts.html" className="navigation__nav-link">Контакты</a></li>
                         <li className="navigation__nav-item"><a href="offers.html" className="navigation__nav-link">Услуги</a></li>
                         <li className="navigation__nav-item"><a href="vacancies.html" className="navigation__nav-link">Вакансии</a></li>

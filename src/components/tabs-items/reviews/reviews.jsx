@@ -12,7 +12,7 @@ const Reviews = ({reviews}) => {
 
     const sendReviewButtonClickHandler = () => {
         document.querySelector(`.modal-card`).classList.remove('visually-hidden');
-        document.querySelector(`body`).classList.add('hidden-overflow');
+        document.querySelector(`html`).classList.add('hidden-overflow');
         document.querySelector(`.modal-card__required-wrapper input`).focus()
 
         document.addEventListener('mouseup', outsideModalClickHandler());
