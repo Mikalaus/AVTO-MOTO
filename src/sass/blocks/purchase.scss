@@ -59,7 +59,10 @@
 
 .purchase__slides {
     display: flex;
-    gap: 25px;
+}
+
+.purchase__slide:not(:last-of-type) {
+    margin-right: 25px;
 }
 
 .purchase__info {

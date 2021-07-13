@@ -57,8 +57,23 @@ const SendReviewPopup = ({onReviewSend}) => {
                 date: new Date()
             })
             document.querySelector(`.modal-card`).classList.add('visually-hidden');
-            document.querySelector(`body`).classList.remove('hidden-overflow');
+            document.querySelector(`html`).classList.remove('hidden-overflow');
             document.querySelector(`.modal-card__form`).reset();
+            document.querySelectorAll(`.modal-card__input-invalid-description`).forEach((el) => {
+                el.classList.remove(`modal-card__input-invalid-description--visible`)
+            })
+        } else {
+            document.querySelectorAll(`.modal-card__input-invalid-description`).forEach((el) => {
+                console.log(el.textContent)
+                if (nameInput.value === ``){
+                    el.classList.add(`modal-card__input-invalid-description--visible`);
+                } else if (commentInput.value === ``) {
+                    el.classList.add(`modal-card__input-invalid-description--visible`)
+                } else {
+                    el.classList.remove(`modal-card__input-invalid-description--visible`)
+                }
+            }
+            )
         }
     }
 
@@ -66,7 +81,7 @@ const SendReviewPopup = ({onReviewSend}) => {
         document.querySelector(`.modal-card`).classList.add('visually-hidden');
         window.removeEventListener(`keydown`, escButtonKeydownCheck);
         document.removeEventListener('mouseup', outsideModalClickCheck);
-        document.querySelector(`body`).classList.remove('hidden-overflow');
+        document.querySelector(`html`).classList.remove('hidden-overflow');
     }
 
     return (
@@ -84,7 +99,7 @@ const SendReviewPopup = ({onReviewSend}) => {
                                 className="modal-card__input modal-card__input--name"
                                 required
                             />
-                            <span className="modal-card__input-invalid-descrition">Пожалуйста, заполните это поле</span>
+                            <span className="modal-card__input-invalid-description">Пожалуйста, заполните это поле</span>
                         </div>
                         <input
                             onInput={oddsInputChangeHandler()}
@@ -180,7 +195,7 @@ const SendReviewPopup = ({onReviewSend}) => {
                                 required
                                 defaultValue={""}
                             />
-                            <span className="modal-card__input-invalid-descrition">Пожалуйста, заполните это поле</span>
+                            <span className="modal-card__input-invalid-description">Пожалуйста, заполните это поле</span>
                         </div>
                     </div>
                     <button onClick={submitButtonClickHandler()} type="submit" className="modal-card__submit">Оставить отзыв</button>
